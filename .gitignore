@@ -1,0 +1,17 @@
+*.bcf
+*.run.xml
+*.synctex.gz
+*.out
+*.synctex(busy)
+*.log
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.nav
+*.snm
+*.toc
+*.lof
+*.lot
+.vscode/settings.json

@@ -1,0 +1,40 @@
+\ProvidesPackage{vegareportcolourful}
+
+\usepackage{tikz}
+\usepackage{xcolor}
+
+\definecolor{color1bg}{HTML}{2C3389}
+\definecolor{color2bg}{HTML}{EFA69D}
+\definecolor{color3bg}{HTML}{B16D95}
+
+\definecolor{colormainblue}{HTML}{2B3189}
+
+\makeatletter
+    \let\inserttitle\@title
+    \let\insertauthor\@author
+    \let\insertdate\@date
+\makeatother
+
+% title, authors, date
+\newcommand{\maketitlepage}{
+    \begin{titlepage}
+        \begin{tikzpicture}[remember picture,overlay]
+              \node [fill, rectangle, top color=colormainblue, bottom color=color2bg, anchor=north, minimum width=0.2\paperwidth, minimum height=\paperheight] (box) at (current page.north west){};
+          \end{tikzpicture}
+          \noindent
+          \begin{figure*}
+              \centering
+              \includegraphics[width = 0.5\linewidth]{VegaLogo1.png}
+          \end{figure*}
+        \begin{center}
+            \begin{Huge}
+              \textsf{\textbf{\inserttitle}}
+            \end{Huge}
+
+            \bigskip
+
+            \begin{Large}
+                \textsf{\insertauthor}
+            \end{Large}
+        \end{center}
+    \end{titlepage}}
